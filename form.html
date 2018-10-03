@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Форма отзыва</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
+</head>
+
+<body class="container">
+  <header class="inner-header">
+    <div class="inner-header__wrapper">
+      <h1 class="visually-hidden">Форма отзыва</h1>
+      <nav class="main-nav main-nav--opened main-nav--nojs">
+        <button class="main-nav__toggle button"><span class="visually-hidden">Открыть</span></button>
+        <ul class="main-nav__list site-list">
+          <li class="main-nav__item site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item site-list__item">
+            <a href="gallery.html">Фото и видео</a>
+          </li>
+          <li class="main-nav__item site-list__item site-list__item--active">
+            <a>Форма отзыва</a>
+          </li>
+          <li class="main-nav__item site-list__item">
+            <a href="#">Html Academy</a>
+          </li>
+          <li class="main-nav__item site-list__item site-list__item-logo">
+            <a href="index.html">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+                <img src="img/logo-sedona-mobile.svg" alt="Логотип гостиницы">
+              </picture>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="form-main">
+    <div class="inner-promo">
+      <img class="inner-promo__image" src="img/text-sedona.svg" alt="Седона">
+    </div>
+    <div class="intro">
+      <h2 class="intro__title">Оставьте свой отзыв</h2>
+      <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, <span>а также о посещенных вами достопримечательностях</span></p>
+    </div>
+    <form class="feedback-form" action="#" method="post">
+      <fieldset class="feedback-form__name-block name-block">
+        <div class="feedback-form__wrapper">
+          <legend class="name-block__caption feedback-form__title">Представьтесь</legend>
+          <div class="name-block__wrapper">
+            <p>
+              <label for="name">Имя*:</label>
+              <input class="feedback-form__field" type="text" name="name" id="name" placeholder="Петр" required="">
+            </p>
+            <p>
+              <label for="surname">Фамилия*:</label>
+              <input class="feedback-form__field" type="text" name="surname" id="surname" placeholder="Иванов" required="">
+            </p>
+            <p>
+              <label for="patronymic">Отчество:</label>
+              <input class="feedback-form__field" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+            </p>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="feedback-form__contacts-block contacts-block">
+        <div class="feedback-form__wrapper">
+          <div class="feedback-form__title-wrapper">
+            <legend class="contacts-block__caption feedback-form__title feedback-form__title--center">Контактная информация</legend>
+          </div>
+          <div class="contacts-block__wrapper">
+            <p class="contacts-block__icon contacts-block__icon--tel">
+              <label for="tel"><span>Контактный</span> телефон*:</label>
+              <input class="feedback-form__field" type="tel" name="tel" id="tel" placeholder="Введите телефон" required="">
+            </p>
+            <p class="contacts-block__icon contacts-block__icon--mail">
+              <label for="mail">Электронная почта*:</label>
+              <input class="feedback-form__field" type="email" name="mail" id="mail" placeholder="Введите e-mail" required="">
+            </p>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="feedback-form__impression-block impression-block">
+        <div class="feedback-form__wrapper">
+          <legend class="impression-block__caption feedback-form__title">Ваше общее впечатление:</legend>
+          <div class="impression-block__wrapper">
+            <p>
+              <input class="visually-hidden" type="radio" name="impression" id="positive" value="positive" checked="">
+              <label for="positive" tabindex="0">Скорее положительное</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="radio" name="impression" id="negative" value="negative">
+              <label for="negative" tabindex="0">Скорее отрицательное</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="radio" name="impression" id="idontknow" value="idontknow">
+              <label for="idontknow" tabindex="0">Затрудняюсь ответить</label>
+            </p>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="feedback-form__places-block places-block">
+        <div class="feedback-form__wrapper">
+          <div class="feedback-form__title-wrapper">
+            <legend class="places-block__caption feedback-form__title feedback-form__title--center">Посещенные достопримечательности:</legend>
+          </div>
+          <div class="places-block__wrapper">
+            <p>
+              <input class="visually-hidden" type="checkbox" name="bridge" id="bridge" value="bridge" checked="">
+              <label for="bridge" tabindex="0">Мост Дьявола</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="checkbox" name="mountain" id="mountain" value="mountain" checked="">
+              <label for="mountain" tabindex="0">Гора-Колокол</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="checkbox" name="park" id="park" value="park" checked="">
+              <label for="park" tabindex="0">Слайд-парк</label>
+            </p>
+            <p>
+              <input class="visually-hidden" type="checkbox" name="redrocks" id="redrocks" value="redrocks">
+              <label for="redrocks" tabindex="0">Красные скалы</label>
+            </p>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="feedback-form__review-block review-block">
+        <div class="feedback-form__wrapper">
+          <div class="feedback-form__title-wrapper">
+            <legend class="review-block__caption feedback-form__title feedback-form__title--center">Опишите свои эмоции:</legend>
+          </div>
+          <div class="review-block__wrapper">
+            <textarea class="review-block__field" name="review-field" id="area-info" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+          </div>
+        </div>
+      </fieldset>
+      <div class="feedback-form__footer-wrapper">
+        <button class="button feedback-form__button" type="submit">Отправить отзыв</button>
+        <span class="feedback-form__required">*- обязательные поля</span>
+      </div>
+    </form>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <div class="main-footer__hash">#visitsedona</div>
+      <div class="main-footer__social social">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <ul class="social__list">
+          <li class="social__item"><a class="button social__link social__link--tw" href="#"><span class="visually-hidden">Мы в Твиттере</span></a></li>
+          <li class="social__item"><a class="button social__link social__link--fb" href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a></li>
+          <li class="social__item"><a class="button social__link social__link--ytb" href="#"><span class="visually-hidden">Мы на Ютубе</span></a></li>
+        </ul>
+      </div>
+      <div class="main-footer__developer developer">
+        <span>Разработано</span>
+        <a class="developer__link" href="#">
+          <svg class="developer__icon" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="scripts/script.min.js"></script>
+  <script src="scripts/validity.min.js"></script>
+</body>
+
+</html>
